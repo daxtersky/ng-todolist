@@ -1,0 +1,10 @@
+<h1>To-do component</h1>
+
+<label>
+  <input type="text" [(ngModel)]="newToDoTitle" placeholder="Add new task..." (keyup.enter)="addTodoItem()">
+</label>
+<ol>
+	<li *ngFor="let todo of todoList">
+    <input type="checkbox" [(ngModel)]="todo.complete"> {{todo.title}}
+  </li>
+</ol>
